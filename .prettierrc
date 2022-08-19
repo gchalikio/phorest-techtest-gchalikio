@@ -1,0 +1,16 @@
+{
+  "tabWidth": 2,
+  "printWidth": 80,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "jsxSingleQuote": false,
+  "quoteProps": "as-needed",
+  "arrowParens": "always",
+  "insertPragma": false,
+  "endOfLine": "lf",
+  "importOrder": ["^components/(.*)$", "^[./]"]
+}
