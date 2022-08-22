@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Phorest Technical Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Generate vouchers for clients as described in this [assignment](https://phorest.notion.site/Consumer-Tribe-Technical-Test-f8dcf606edb34e4d9b9b1648c7313764).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Search for a client
+- Handling when there are many of the same clients returned
+- Create a voucher for that client for a specific amount
 
-### `npm start`
+## Requirements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You will need the following things properly installed on your computer.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+git clone https://github.com/gchalikio/phorest-techtest-gchalikio.git
+cd phorest-techtest-gchalikio
+npm install
+npm start
+```
 
-### `npm run build`
+You can now view phorest-techtest-gchalikio in the browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.7:3000
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The tests include unit tests and one integration test for the voucher.
 
-### `npm run eject`
+```sh
+  npm test
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  Test Suites: 8 passed, 8 total
+  Tests:       26 passed, 26 total
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `npm start` — Launches the app in development mode on [`http://localhost:3000/`](http://localhost:3000/)
+- `npm build` — Compiles and bundles the app for deployment
+- `npm test` — Run unit tests with Jest
+- `npm run lint` — Validate the code using ESLint
+- `npm run lint:fix` — Validate the code using ESLint and fix errors
+- `npm run format` — Format the code using prettier
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Libraries
 
-## Learn More
+- [React.js](https://reactjs.org/) - React is a JavaScript library for building user interfaces.
+- [React Router](https://reactrouter.com/) - Declarative routing for React
+- [React Hook Form](https://react-hook-form.com/) - React Hooks for form state management and validation
+- [Axios](https://axios-http.com/docs/intro) - Promise based HTTP client for the browser and node.js
+- [Moment.js](https://momentjs.com/) - A JavaScript date library for parsing, validating, manipulating, and formatting dates.
+- [Jest.js](https://jestjs.io/) - Delightful JavaScript Testing
+- [React Testing Library](https://github.com/testing-library/react-testing-library) - Simple and complete React DOM testing utilities that encourage good testing practices.
+- [Bulma](https://bulma.io) - Bulma is a **modern CSS framework** based on [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Src Directory Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`├──` api — API requests per model <br>
+`├──` assets — Any image/other static assets <br>
+`├──` components — React components to be used by pages <br>
+`├──` config — Configuration <br>
+`├──` lib — Internal helper functions <br>
+`├──` pages — Each browser page has its own file/folder here <br>
+`├──` styles — Styles grouped by page and components <br>
+`└──` tests — Tests grouped by page and components <br>
 
-### Code Splitting
+## Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React.js is used for building the interface.
+- create-react-app was used to bootstrap the application, providing some tools out of the box
+- Project structure(as described above) folders are grouped by purpose and not by domain, as it is a small application
+- Bulma css framework is used to provide a faster development time
+- The app is divided in pages, which can contain components and make use of lib and pi functions
+- Local component state passing down props is prefered instead of redux/context, as there isn't a big component tree
+- The api url and credentials are provided for simplicity from the config folder, but shouldn't be sourced in a real world production application(github secrets, env variables..)
+- Eslint is used to enforce code style and Prettier to format the code based on rules
+- Application.jsx file is used to keep the App.js file clean and thin and would mostly contain initialization code or calls to the API.
+- jsconfig is used to be able to have relative imports in files
+- react-hook-form is used to simplify the form creation and validation
+- Models and serializations are not used, but should be used in a production app, to apply validation and avoid errors
 
-### Analyzing the Bundle Size
+## Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This exercise is [MIT licensed](./LICENSE).
