@@ -1,0 +1,17 @@
+.overlay {
+  background-color: #0000007a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.with-background {
+  background-image: url(https://comfortel.co.uk/wp-content/uploads/studio-benicky-salon-interior-boho-1.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+}
